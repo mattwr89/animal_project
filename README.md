@@ -2,7 +2,7 @@
 ## Animal Project
 Project that helps take care of seniors animals during COVID-19 lockdown
 
-
+![welcome](src/main/webapp/resources/readMeIMG/Weclome.png)
 ### Used technologies 
 * Java EE
 * Spring

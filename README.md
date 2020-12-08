@@ -13,5 +13,5 @@ Project that helps take care of seniors animals during COVID-19 lockdown
 * JSP
 * HTML5
 * CSS3
-* JavaScript
+
 

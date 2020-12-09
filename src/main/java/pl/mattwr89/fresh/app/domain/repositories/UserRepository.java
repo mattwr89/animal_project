@@ -6,7 +6,6 @@ import pl.mattwr89.fresh.app.domain.entities.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findOneByUsername(String username);
 
     boolean existsUserByUsername(String username);
     boolean existsUserByEmail(String email);

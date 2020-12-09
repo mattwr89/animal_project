@@ -68,22 +68,24 @@
 <div class="container">
     <label class="label">Imię / Nick</label>
     <div class="control">
-        <form:input path="username" type="text" name="username" placeholder="Wpisz swoje imię"/>
+        <form:input path="username" type="text" name="username" placeholder="Imię"/>
+        <form:errors path="username" cssClass="error-small"/>
     </div>
 </div>
-
+<br>
 <div class="container">
     <label class="label">Mail</label>
     <div class="control">
         <form:input path="email" type="email" placeholder="Wpisz email"/>
-
+        <form:errors path="email" cssClass="error-small"/>
     </div>
-
+<br>
     <div class="container">
         <label class="label">Hasło</label>
     <div class="control">
         <form:input path="password" type="passord" placeholder="Wprowadź hasło"/>
-
+        <form:errors path="password" cssClass="error-small"/>
+<br>
     </div>
     </div>
     <br>

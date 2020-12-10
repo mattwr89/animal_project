@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")@Slf4j
 public class HomeController {
 
+    
     @GetMapping
     public String homeAction() {
         return "index";

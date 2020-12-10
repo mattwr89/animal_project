@@ -2,6 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html lang="pl">
 <%@include file="head.jsp"%>
@@ -11,7 +12,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="">
-      <img src="<c:url value="resources/images/companyLogo.png" />" width="112" height="28" alt="Logo"/>
+      <img src="<c:url value="/resources/images/companyLogo.png" />" width="112" height="28" alt="Logo"/>
     </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -90,103 +91,62 @@
     </div>
 <br>
 </div>
-
-<div class="container">
-<%--  <img src="resources/images/1.jpg" id="responsive-flamingo" width="1280">--%>
-</div>
-
-
-<br><br><br>
+<br>
+<br>
+<br>
 <div class="container">
   <label class="label">Imię</label>
   <div class="control">
     <input class="input" type="text" placeholder="Wpisz swoje imię">
   </div>
-</div>
-
-<div class="container">
-  <label class="label">Ulica</label>
-  <div class="control has-icons-left has-icons-right">
-    <input class="input" type="text" placeholder="Nie podawaj dokładnego adresu, jedynie ulicę" >
-    <span class="icon is-small is-left">
-      <i class="fas fa-user"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-check"></i>
-    </span>
-  </div>
-</div>
-
-<div class="container">
-  <label class="label">Nr. kontakowy</label>
-
-    <input class="input" type="number" placeholder="Wpisz numer telefonu kontaktowego" >
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-    <span class="icon is-small is-right">
-      <i class="fas fa-exclamation-triangle"></i>
-    </span>
-  </div>
-
 <br>
-<div class="container">
-  <label class="label">Miasto</label>
-  <div class="control">
-    <div class="select">
-      <select>
-        <option>Wybierz swoje miasto</option>
-        <option>With options</option>
-      </select>
+  <div class="field">
+    <label class="label">Wybierz miasto</label>
+    <div class="control">
+      <div class="select">
+        <select>
+          <option>Wrocław</option>
+        </select>
+      </div>
     </div>
   </div>
-</div>
+
+  <label class="label">Ulica</label>
+  <div class="label">
+    <input class="input" type="text" placeholder="Wprowadź ulicę" >
+  </div>
+
+  <label class="label">Nr. kontaktowy</label>
+  <div class="label">
+    <input class="input" type="number" placeholder="Wpisz nr kontaktowy" >
+  </div>
 <br>
-<div class="container">
   <label class="label">Termin spaceru</label>
-  <div class="form-group form-group--inline">
-    <label> Data <input pattern="yyyy-MM-dd" type="date" name="pickUpDate" id="pickUpDate" value="${notificationData.pickUpDate}"/>
-    </label>
-  </div>
-
-  <div class="form-group form-group--inline">
-    <label> Godzina <input type="time" name="pickUpTime" id="pickUpTime" value="${notificationData.pickUpTime}"/>
-    </label>
+  <div class="label">
+      <label> Data <input pattern="yyyy-MM-dd" type="date" name="pickUpDate" id="pickUpDate"/> </label>
   </div>
 <br>
-<div class="container">
-  <label class="label">Informacje dla wolontariusza, dotyczące zwierzaka</label>
-  <div class="control">
-    <textarea class="textarea" placeholder="Wpisz to co uważasz za najważniejsze na spacerze, np, trzymać zdala od innych piesków, nie lubi się głaskać"></textarea>
-  </div>
-</div>
 
-<div class="container">
+
+  <label class="label">Informacja o zwierzaku dla wolontariusza</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="Np. nie głaskać, nie lubi otoczenia innych zwierząt"></textarea>
+  </div>
+
+
   <div class="control">
     <label class="checkbox">
       <input type="checkbox">
-      I agree to the <a href="#">terms and conditions</a>
+      Akceptuję <a href="#">regulamin serwisu</a>
     </label>
   </div>
-</div>
 
-<div class="container">
+
   <div class="control">
-    <label class="radio">
-      <input type="radio" name="question">
-      Yes
-    </label>
-    <label class="radio">
-      <input type="radio" name="question">
-      No
-    </label>
-    <br>
+    <button class="button is-link">Submit</button>
   </div>
-    <button class="button is-link">Wyślij zgłoszenie</button>
-  </div>
-</div>
-<br>
 
 </div>
+
 </body>
 </html>

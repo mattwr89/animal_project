@@ -7,5 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ogarnij zwierzaka !</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/resources/images/android-icon-36x36.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>

@@ -21,7 +21,7 @@
 
 <div id="navbarBasicExample" class="navbar-menu">
     <div class="navbar-start">
-        <a href="/home" class="navbar-item">
+        <a href="/" class="navbar-item">
             Start
         </a>
 

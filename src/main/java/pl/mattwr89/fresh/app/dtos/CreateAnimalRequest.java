@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Data
-public class CreateNotificationRequest {
+public class CreateAnimalRequest {
 
     private String name;
     private String street;

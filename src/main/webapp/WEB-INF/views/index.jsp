@@ -94,43 +94,41 @@
 <br>
 <br>
 <br>
+<section>
+<form:form modelAttribute="animalData" method="post" action="/animal/add">
 <div class="container">
   <label class="label">Imię</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Wpisz swoje imię">
+    <form:input path="name" type="name" placeholder="Wpisz swoje imię"/>
   </div>
 <br>
-  <div class="field">
-    <label class="label">Wybierz miasto</label>
-    <div class="control">
-      <div class="select">
-        <select>
-          <option>Wrocław</option>
-        </select>
-      </div>
-    </div>
-  </div>
 
+  <label class="label">Twoje miasto</label>
+  <div class="control">
+    <form:input path="city" type="city" placeholder="Wpisz miasto"/>
+  </div>
+<br>
   <label class="label">Ulica</label>
   <div class="label">
-    <input class="input" type="text" placeholder="Wprowadź ulicę" >
+    <form:input path="street" type="street" placeholder="Wpisz miasto"/>
   </div>
-
+<br>
   <label class="label">Nr. kontaktowy</label>
   <div class="label">
-    <input class="input" type="number" placeholder="Wpisz nr kontaktowy" >
+    <form:input path="phoneNumber" type="name" placeholder="Wpisz miasto"/>
   </div>
 <br>
   <label class="label">Termin spaceru</label>
   <div class="label">
-      <label> Data <input pattern="yyyy-MM-dd" type="date" name="pickUpDate" id="pickUpDate"/> </label>
+      <label> Data <input pattern="yyyy-MM-dd" type="date" name="pickUpDate" id="pickUpDate" value="${animalData.pickUpDate}"/> </label>
+      <label> Godzina <input type="time" name="pickUpTime" id="pickUpTime" value="${animalData.pickUpTime}"/></label>
   </div>
 <br>
 
 
   <label class="label">Informacja o zwierzaku dla wolontariusza</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Np. nie głaskać, nie lubi otoczenia innych zwierząt"></textarea>
+    <textarea class="textarea" name="pickUpComment" placeholder="Np. nie głaskać, nie lubi otoczenia innych zwierząt"></textarea>
   </div>
 
 
@@ -147,6 +145,7 @@
   </div>
 
 </div>
-
+</form:form>
+</section>
 </body>
 </html>
